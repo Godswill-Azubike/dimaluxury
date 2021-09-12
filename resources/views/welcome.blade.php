@@ -239,7 +239,7 @@
 			<div class="services">
 				<div class="container">
 					<div class="text-center">
-						<h2>Services</h2>
+						<h2>Our Services</h2>
 						<div class="border-multiple">
 							<span class="first"></span>
 							<span class="second"></span>
