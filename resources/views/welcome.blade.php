@@ -255,7 +255,7 @@
 						</div>
 					</div>
 					<div class="mt-5">
-						<div class="row">
+						{{-- <div class="row">
 							<div class="col-lg-4">
 								<a href="faq.html" class="service-link">
 									<div class="box text-center">
@@ -310,7 +310,7 @@
 									</div>
 								</a>
 							</div>
-						</div>
+						</div> --}}
 					</div>
 				</div>
 			</div>
