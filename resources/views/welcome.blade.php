@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+{{-- <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
         <meta charset="utf-8">
@@ -47,7 +47,7 @@
                         </g>
                     </svg>
                 </div> -->
-<!-- 
+<!--
                 <div class="mt-8 bg-white dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg">
                     <div class="grid grid-cols-1 md:grid-cols-2">
                         <div class="p-6">
@@ -138,5 +138,255 @@
             <div>9</div>
         </div>
     </body>
+
+</html> --}}
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="Product store front with prices">
+	<meta name="author" content="UWS">
+	<title>DIMALUXURYH | Product store front with prices</title>
+
+	<!-- Favicon -->
+	<!-- <link href="img/favicon.png" rel="shortcut icon"> -->
+
+	<!-- Google Fonts - Poppins, Karla -->
+	<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Karla:300,400,500,600,700" rel="stylesheet">
+
+	<!-- Font Awesome CSS -->
+	<link href="{{asset("vendor/fontawesome/css/all.min.css")}}" rel="stylesheet">
+
+	<!-- Custom Font Icons -->
+	<link href="{{asset("vendor/icomoon/css/iconfont.min.css")}}" rel="stylesheet">
+
+	<!-- Vendor CSS -->
+	<link href="{{asset("vendor/bootstrap/css/bootstrap.min.css")}}" rel="stylesheet">
+	<link href="{{asset("vendor/animate/css/animate.min.css")}}" rel="stylesheet">
+	<link href="{{asset("vendor/dmenu/css/menu.css")}}" rel="stylesheet">
+	<link href="{{asset("vendor/hamburgers/css/hamburgers.min.css")}}" rel="stylesheet">
+	<link href="{{asset("vendor/mmenu/css/mmenu.min.css")}}" rel="stylesheet">
+	<link href="{{asset("vendor/range-slider/css/ion.rangeSlider.css")}}" rel="stylesheet">
+	<link href="{{asset("vendor/magnific-popup/css/magnific-popup.css")}}" rel="stylesheet">
+	<!-- <link href="vendor/float-labels/css/float-labels.min.css" rel="stylesheet"> -->
+
+	<!-- Main CSS -->
+	<link href="css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+	<!-- Preloader -->
+	<div id="preloader">
+		<div data-loader="circle-side"></div>
+	</div>
+	<!-- Preloader End -->
+
+	<!-- Page -->
+	<div id="page">
+		<!-- Header -->
+		<header class="main-header sticky">
+			<a href="#menu" class="btn-mobile">
+				<div class="hamburger hamburger--spin" id="hamburger">
+					<div class="hamburger-box">
+						<div class="hamburger-inner"></div>
+					</div>
+				</div>
+			</a>
+
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-3 col-6">
+						<div id="logo">
+							<h1><a href="index.html" title="Dimaluxury"><span><b><strong>Dima</strong></b></span>LuxuryH</a></h1>
+						</div>
+					</div>
+					<div class="col-lg-9 col-6">
+						<!-- Menu -->
+						<nav id="menu" class="main-menu">
+							<ul>
+								<li><span><a href="index.html">Home</a></span></li>
+								<li><span><a href="faq.html">Faq</a></span></li>
+								<li><span><a href="#">Contacts</a></span></li>
+							</ul>
+						</nav>
+						<!-- Menu End -->
+					</div>
+				</div>
+			</div>
+		</header>
+		<!-- Header End -->
+
+		<main>
+			<!-- Hero -->
+			<div class="hero-home bg-mockup">
+				<div class="content">
+					<h4>Hello My Neighbour!</h4>
+					<p>You'r welcome to Dimaluxury Hair.</p>
+					<a href="calculator-1.html" class="btn-1 medium">Explore Now</a>
+				</div>
+			</div>
+			<!-- Hero End -->
+
+			<!-- Services -->
+			<div class="services">
+				<div class="container">
+					<div class="text-center">
+						<h2>Services</h2>
+						<div class="border-multiple">
+							<span class="first"></span>
+							<span class="second"></span>
+							<span class="third"></span>
+						</div>
+						<div class="row">
+							<div class="col-lg-8 mx-auto">
+								<p class="lead">🍒Luxury Virgin Hairs for Every Woman ||
+                                    🍒No Payment on delivery ||
+                                    🍒Delivery 🌎 ||
+                                    🍒Mon-Sat</p>
+							</div>
+						</div>
+					</div>
+					<div class="mt-5">
+						<div class="row">
+							<div class="col-lg-4">
+								<a href="faq.html" class="service-link">
+									<div class="box text-center">
+										<div class="icon d-flex align-items-end"><i class="icon icon-calculator-1 color-1"></i></div>
+										<h3 class="service-title">Cost Calculations</h3>
+										<p>One of your services which tells about price calculations.</p>
+									</div>
+								</a>
+							</div>
+							<div class="col-lg-4">
+								<a href="faq.html" class="service-link">
+									<div class="box text-center">
+										<div class="icon d-flex align-items-end"><i class="icon icon-shopping-cart-1 color-2"></i></div>
+										<h3 class="service-title">Order Wizard</h3>
+										<p>One of your services which tells about order generation.</p>
+									</div>
+								</a>
+							</div>
+							<div class="col-lg-4">
+								<a href="faq.html" class="service-link">
+									<div class="box text-center">
+										<div class="icon d-flex align-items-end"><i class="icon icon-email color-3"></i></div>
+										<h3 class="service-title">Email Summary</h3>
+										<p>One of your services which tells about auto email summary.</p>
+									</div>
+								</a>
+							</div>
+							<div class="col-lg-4">
+								<a href="faq.html" class="service-link">
+									<div class="box text-center">
+										<div class="icon d-flex align-items-end"><i class="icon icon-truck color-3"></i></div>
+										<h3 class="service-title">Quick Delivery</h3>
+										<p>One of your services which tells about safe and quick delivery.</p>
+									</div>
+								</a>
+							</div>
+							<div class="col-lg-4">
+								<a href="faq.html" class="service-link">
+									<div class="box text-center">
+										<div class="icon d-flex align-items-end"><i class="icon icon-support color-1"></i></div>
+										<h3 class="service-title">Customer Support</h3>
+										<p>One of your services which tells about customer care.</p>
+									</div>
+								</a>
+							</div>
+							<div class="col-lg-4">
+								<a href="faq.html" class="service-link">
+									<div class="box text-center">
+										<div class="icon d-flex align-items-end"><i class="icon icon-checkmark-circle color-2"></i></div>
+										<h3 class="service-title">Guarantee</h3>
+										<p>One of your services which tells about product, service guarantee.</p>
+									</div>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Services End -->
+
+		</main>
+		<!-- Main End -->
+
+		<!-- Footer -->
+		<footer class="main-footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-3">
+						<h5 class="footer-heading">Menu Links</h5>
+						<ul class="list-unstyled nav-links">
+							<li><i class="fas fa-angle-right"></i> <a href="index.html" class="footer-link">Home</a></li>
+							<li><i class="fas fa-angle-right"></i> <a href="#" class="footer-link">FAQ</a></li>
+							<li><i class="fas fa-angle-right"></i> <a href="#" class="footer-link">Contacts</a></li>
+						</ul>
+					</div>
+					<div class="col-md-4">
+						<h5 class="footer-heading">Contacts</h5>
+						<ul class="list-unstyled contact-links">
+							<li><i class="icon icon-map-marker"></i><a href="https://goo.gl/maps/vKgGyZe2JSRLDnYH6" class="footer-link" target="_blank">Address: We every where on the internet</a>
+							</li>
+							<li><i class="icon icon-envelope3"></i><a href="mailto:dimaluxuryh@gmail.com" class="footer-link">Mail: dimaluxuryh@gmail.com</a></li>
+							<li><i class="icon icon-phone2"></i><a href="tel:+2349121459935" class="footer-link">Phone: +2349121459935</a></li>
+						</ul>
+					</div>
+					<div class="col-md-2">
+						<h5 class="footer-heading">Follow Us</h5>
+						<ul class="list-unstyled social-links">
+							<li><a href="https://facebook.com" class="social-link" target="_blank"><i class="icon icon-facebook"></i></a></li>
+							<li><a href="https://twitter.com" class="social-link" target="_blank"><i class="icon icon-twitter"></i></a></li>
+							<li><a href="https://instagram.com" class="social-link" target="_blank"><i class="icon icon-instagram"></i></a></li>
+						</ul>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-8">
+						<ul id="subFooterLinks">
+							<li><a href="https://gygital.com" target="_blank">With <i class="fa fa-heart pulse"></i> by Gygital</a></li>
+							<li><a href="#" target="_blank">Terms and conditions</a></li>
+						</ul>
+					</div>
+					<div class="col-md-4">
+						<div id="copy">© 2021 DIMALUXURYH</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<!-- Footer End -->
+	</div>
+	<!-- Page End -->
+
+	<!-- Back to top button -->
+	<div id="toTop"><i class="fa fa-chevron-up"></i></div>
+
+	<!-- Vendor Javascript Files -->
+	<script src="{{asset("vendor/jquery/jquery.min.js")}}"></script>
+	<script src="{{asset("vendor/bootstrap/js/bootstrap.min.js")}}"></script>
+	<script src="{{asset("vendor/easing/js/easing.min.js")}}"></script>
+	<script src="{{asset("vendor/parsley/js/parsley.min.js")}}"></script>
+	<script src="{{asset("vendor/nice-select/js/jquery.nice-select.min.js")}}"></script>
+	<script src="{{asset("vendor/range-slider/js/ion.rangeSlider.min.js")}}"></script>
+	<script src="{{asset("vendor/price-format/js/jquery.priceformat.min.js")}}"></script>
+	<script src="{{asset("vendor/theia-sticky-sidebar/js/ResizeSensor.min.js")}}"></script>
+	<script src="{{asset("vendor/theia-sticky-sidebar/js/theia-sticky-sidebar.min.js")}}"></script>
+	<script src="{{asset("vendor/mmenu/js/mmenu.min.js")}}"></script>
+	<script src="{{asset("vendor/magnific-popup/js/jquery.magnific-popup.min.js")}}"></script>
+	<!-- <script src="vendor/float-labels/js/float-labels.min.js"></script> -->
+
+	<!-- Main Javascript File -->
+	<script src="{{asset("js/scripts.js")}}"></script>
+
+</body>
 
 </html>
