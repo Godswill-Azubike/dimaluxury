@@ -230,7 +230,7 @@
 				<div class="content">
 					<h4>Hello My Neighbour!</h4>
 					<p>You'r welcome to Dimaluxury Hair.</p>
-					<a href="calculator-1.html" class="btn-1 medium">Explore Now</a>
+					<a href="#" class="btn-1 medium">Order Now</a>
 				</div>
 			</div>
 			<!-- Hero End -->
@@ -255,62 +255,22 @@
 						</div>
 					</div>
 					<div class="mt-5">
-						{{-- <div class="row">
-							<div class="col-lg-4">
+						<div class="row">
+                            @forelse ($productData as $product)
+                            <div class="col-lg-4">
 								<a href="faq.html" class="service-link">
 									<div class="box text-center">
-										<div class="icon d-flex align-items-end"><i class="icon icon-calculator-1 color-1"></i></div>
-										<h3 class="service-title">Cost Calculations</h3>
-										<p>One of your services which tells about price calculations.</p>
+										<div class="icon d-flex align-items-end"><img src="{{ asset("img/female-hair-shape.png") }}" alt="" height="45"></div>
+										<h3 class="service-title"><b>{{ $product->Product }}</b></h3>
+                                        <span class="badge bg-success text-white">{{ $product->Location }}</span>
+										<p>Unit Price :: ₦ {{ $product->Unit_Price }}</p>
 									</div>
 								</a>
 							</div>
-							<div class="col-lg-4">
-								<a href="faq.html" class="service-link">
-									<div class="box text-center">
-										<div class="icon d-flex align-items-end"><i class="icon icon-shopping-cart-1 color-2"></i></div>
-										<h3 class="service-title">Order Wizard</h3>
-										<p>One of your services which tells about order generation.</p>
-									</div>
-								</a>
-							</div>
-							<div class="col-lg-4">
-								<a href="faq.html" class="service-link">
-									<div class="box text-center">
-										<div class="icon d-flex align-items-end"><i class="icon icon-email color-3"></i></div>
-										<h3 class="service-title">Email Summary</h3>
-										<p>One of your services which tells about auto email summary.</p>
-									</div>
-								</a>
-							</div>
-							<div class="col-lg-4">
-								<a href="faq.html" class="service-link">
-									<div class="box text-center">
-										<div class="icon d-flex align-items-end"><i class="icon icon-truck color-3"></i></div>
-										<h3 class="service-title">Quick Delivery</h3>
-										<p>One of your services which tells about safe and quick delivery.</p>
-									</div>
-								</a>
-							</div>
-							<div class="col-lg-4">
-								<a href="faq.html" class="service-link">
-									<div class="box text-center">
-										<div class="icon d-flex align-items-end"><i class="icon icon-support color-1"></i></div>
-										<h3 class="service-title">Customer Support</h3>
-										<p>One of your services which tells about customer care.</p>
-									</div>
-								</a>
-							</div>
-							<div class="col-lg-4">
-								<a href="faq.html" class="service-link">
-									<div class="box text-center">
-										<div class="icon d-flex align-items-end"><i class="icon icon-checkmark-circle color-2"></i></div>
-										<h3 class="service-title">Guarantee</h3>
-										<p>One of your services which tells about product, service guarantee.</p>
-									</div>
-								</a>
-							</div>
-						</div> --}}
+                            @empty
+
+                            @endforelse
+						</div>
 					</div>
 				</div>
 			</div>
