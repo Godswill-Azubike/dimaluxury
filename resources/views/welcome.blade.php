@@ -205,15 +205,15 @@
 				<div class="row">
 					<div class="col-lg-3 col-6">
 						<div id="logo">
-							<h1><a href="index.html" title="Dimaluxury"><span><b><strong>Dima</strong></b></span>LuxuryH</a></h1>
+							<h1><a href="#" title="Dimaluxury"><span><b><strong>Dima</strong></b></span>LuxuryH</a></h1>
 						</div>
 					</div>
 					<div class="col-lg-9 col-6">
 						<!-- Menu -->
 						<nav id="menu" class="main-menu">
 							<ul>
-								<li><span><a href="index.html">Home</a></span></li>
-								<li><span><a href="faq.html">Faq</a></span></li>
+								<li><span><a href="#">Home</a></span></li>
+								<li><span><a href="#">Faq</a></span></li>
 								<li><span><a href="#">Contacts</a></span></li>
 							</ul>
 						</nav>
@@ -230,7 +230,7 @@
 				<div class="content">
 					<h4>Hello My Neighbour!</h4>
 					<p>You'r welcome to Dimaluxury Hair.</p>
-					<a href="#" class="btn-1 medium">Order Now</a>
+					<a href="#order" class="btn-1 medium">Order Now</a>
 				</div>
 			</div>
 			<!-- Hero End -->
@@ -239,7 +239,7 @@
 			<div class="services">
 				<div class="container">
 					<div class="text-center">
-						<h2>Our Services</h2>
+						<h2>Our Products</h2>
 						<div class="border-multiple">
 							<span class="first"></span>
 							<span class="second"></span>
@@ -254,16 +254,17 @@
 							</div>
 						</div>
 					</div>
-					<div class="mt-5">
+					<div class="mt-5" id="order">
 						<div class="row">
                             @forelse ($productData as $product)
                             <div class="col-lg-4">
-								<a href="faq.html" class="service-link">
+								<a href="#" class="service-link">
 									<div class="box text-center">
 										<div class="icon d-flex align-items-end"><img src="{{ asset("img/female-hair-shape.png") }}" alt="" height="45"></div>
 										<h3 class="service-title"><b>{{ $product->Product }}</b></h3>
                                         <span class="badge bg-success text-white">{{ $product->Location }}</span>
-										<p>Unit Price :: ₦ {{ $product->Unit_Price }}</p>
+										<p><b>Unit Price ::</b> ₦ {{ $product->Unit_Price }} <br> <b>Current Stock::</b> {{ $product->Current_stock }}</p>
+                                        <a href="#" class="btn-1 medium">Make Purchase</a>
 									</div>
 								</a>
 							</div>
@@ -286,7 +287,7 @@
 					<div class="col-md-3">
 						<h5 class="footer-heading">Menu Links</h5>
 						<ul class="list-unstyled nav-links">
-							<li><i class="fas fa-angle-right"></i> <a href="index.html" class="footer-link">Home</a></li>
+							<li><i class="fas fa-angle-right"></i> <a href="#" class="footer-link">Home</a></li>
 							<li><i class="fas fa-angle-right"></i> <a href="#" class="footer-link">FAQ</a></li>
 							<li><i class="fas fa-angle-right"></i> <a href="#" class="footer-link">Contacts</a></li>
 						</ul>
@@ -303,9 +304,9 @@
 					<div class="col-md-2">
 						<h5 class="footer-heading">Follow Us</h5>
 						<ul class="list-unstyled social-links">
-							<li><a href="https://facebook.com" class="social-link" target="_blank"><i class="icon icon-facebook"></i></a></li>
-							<li><a href="https://twitter.com" class="social-link" target="_blank"><i class="icon icon-twitter"></i></a></li>
-							<li><a href="https://instagram.com" class="social-link" target="_blank"><i class="icon icon-instagram"></i></a></li>
+							<li><a href="https://www.facebook.com/dimaluxuryh/" class="social-link" target="_blank"><i class="icon icon-facebook"></i></a></li>
+							{{-- <li><a href="https://twitter.com" class="social-link" target="_blank"><i class="icon icon-twitter"></i></a></li> --}}
+							<li><a href="https://www.instagram.com/dimaluxuryh" class="social-link" target="_blank"><i class="icon icon-instagram"></i></a></li>
 						</ul>
 					</div>
 				</div>
