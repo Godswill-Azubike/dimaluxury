@@ -18,7 +18,7 @@ use App\Http\Controllers\GenericController;
 //     return view('welcome');
 // });
 
-Route::get('/', [GenericController::class, 'indexPage']);
+Route::get('/', [GenericController::class, 'indexPage'])->name('welcome');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
