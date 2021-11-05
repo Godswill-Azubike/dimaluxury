@@ -6,11 +6,7 @@
 
 @section('componet')
 <div class="col-12 col-sm-10 col-md-8 col-lg-5 col-xl-5">
-    <div class="login-brand">
-        <a href="{{ route('welcome') }}">
-            <img src="{{ url('logo2.png') }}" alt="logo" height="35">
-        </a>
-    </div>
+
         <div class="card card-primary shadow mt-3">
             <div class="card-header">
                 <h4>Reset Password</h4>

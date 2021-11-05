@@ -1,39 +1,3 @@
-{{-- <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="csrf-token" content="{{ csrf_token() }}">
-
-        <title>{{ config('app.name', 'Laravel') }}</title>
-
-        <!-- Fonts -->
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
-
-        <!-- Styles -->
-        <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-
-        <!-- Scripts -->
-        <script src="{{ asset('js/app.js') }}" defer></script>
-    </head>
-    <body class="font-sans antialiased">
-        <div class="min-h-screen bg-gray-100">
-            @include('layouts.navigation')
-
-            <!-- Page Heading -->
-            <header class="bg-white shadow">
-                <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-                    {{ $header }}
-                </div>
-            </header>
-
-            <!-- Page Content -->
-            <main>
-                {{ $slot }}
-            </main>
-        </div>
-    </body>
-</html> --}}
 
 
 <!DOCTYPE html>
@@ -121,12 +85,12 @@
             <aside id="sidebar-wrapper">
                 <div class="sidebar-brand">
                     <a href="{{ route('dashboard') }}">
-                        <img src="{{ asset('logo2.png') }}" alt="" height="35">
+                        <strong>DimaLuxury</strong>
                     </a>
                 </div>
                 <div class="sidebar-brand sidebar-brand-sm">
                     <a href="{{ route('dashboard') }}">
-                        <img src="{{ url('assets/img/favicon.png') }}" alt="" height="35">
+                        <b>DL</b>
                     </a>
                 </div>
                 <ul class="sidebar-menu">
@@ -137,10 +101,10 @@
                             <li class="active"><a class="nav-link" href="{{ route('dashboard') }}">Home</a></li>
                         </ul>
                     </li>
-                    @if (Auth::user()->is_admin == 1)
+                    @if (Auth::user()->isAdmin == 1)
                     <li class="menu-header">Administration</li>
-                    {{-- <li><a class="nav-link" href="{{ route('allpackage') }}"><i class="fa fa-tasks"></i> <span>All shipment</span></a></li>
-                    <li><a class="nav-link" href="{{ route('addpackage') }}"><i class="fa fa-tasks"></i> <span>Add shipment</span></a></li> --}}
+                    <li><a class="nav-link" href="{{ route('products') }}"><i class="fa fa-tasks"></i> <span>All Products</span></a></li>
+                    {{-- <li><a class="nav-link" href="#"><i class="fa fa-tasks"></i> <span>Add shipment</span></a></li> --}}
                     @endif
 
                     <li class="menu-header">My Account</li>
@@ -164,7 +128,7 @@
 </div>
 @yield('modals')
 
-@if (Auth::user()->is_admin == 0)
+@if (Auth::user()->isAdmin == 0)
 {{-- <script src="//code.jivosite.com/widget/4LelClvhAF" async></script> --}}
 @endif
 

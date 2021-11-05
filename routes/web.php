@@ -24,4 +24,6 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
 
+Route::get('/products', [GenericController::class, 'products'])->name('products');
+
 require __DIR__ . '/auth.php';

@@ -15,4 +15,10 @@ class GenericController extends Controller
             'productData' => Dimaluxury3::orderBy('id', 'desc')->simplePaginate(9),
         ]);
     }
+    public function products()
+    {
+        return view('products', [
+            'productData' => Dimaluxury3::orderBy('id', 'desc')->simplePaginate(20),
+        ]);
+    }
 }
