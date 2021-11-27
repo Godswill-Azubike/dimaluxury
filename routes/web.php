@@ -2,28 +2,26 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\GenericController;
+use App\Http\Controllers\ProductController;
+use App\Http\Controllers\OrderController;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
-
-// Route::get('/', function () {
-//     return view('welcome');
-// });
 
 Route::get('/', [GenericController::class, 'indexPage'])->name('welcome');
 
+Route::get('/{id}/check-in', [GenericController::class, 'checkIn'])->name('checkIn');
+
 Route::get('/dashboard', function () {
-    return view('dashboard');
+    return view('admin.dashboard');
 })->middleware(['auth'])->name('dashboard');
 
-Route::get('/products', [GenericController::class, 'products'])->name('products');
+// list of all authenticated endpionts
+Route::get('/products', [ProductController::class, 'products'])->middleware(['auth'])->name('products');
+Route::get('/add-product', [ProductController::class, 'addProduct'])->middleware(['auth'])->name('addProduct');
+Route::post('/add-product', [ProductController::class, 'addProductDb'])->middleware(['auth']);
+
+Route::get('/product/{id}/enable-sale', [ProductController::class, 'enableSale'])->middleware(['auth'])->name('enableSale');
+Route::get('/product/{id}/disable-sale', [ProductController::class, 'disableSale'])->middleware(['auth'])->name('disableSale');
+
+Route::get('/orders', [OrderController::class, 'orders'])->middleware(['auth'])->name('orders');
 
 require __DIR__ . '/auth.php';

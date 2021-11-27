@@ -104,10 +104,16 @@
                     @if (Auth::user()->isAdmin == 1)
                     <li class="menu-header">Administration</li>
                     <li><a class="nav-link" href="{{ route('products') }}"><i class="fa fa-tasks"></i> <span>All Products</span></a></li>
+                    <li><a class="nav-link" href="{{ route('addProduct') }}"><i class="fa fa-plus"></i> <span>Add Products</span></a></li>
+                    <li><a class="nav-link" href="{{ route('orders') }}"><i class="fa fa-tasks"></i> <span>Orders</span></a></li>
                     {{-- <li><a class="nav-link" href="#"><i class="fa fa-tasks"></i> <span>Add shipment</span></a></li> --}}
                     @endif
 
                     <li class="menu-header">My Account</li>
+                    @if (Auth::user()->isAdmin == 1)
+                        <li><a class="nav-link" href="#"><i class="fa fa-cog"></i> <span>Setting</span></a></li>
+                    @endif
+                    <li><a class="nav-link" href="#"><i class="fa fa-user"></i> <span>Profile</span></a></li>
                 </ul>
                 <div class="mt-4 mb-4 p-3 hide-sidebar-mini">
                     <form action="{{ route('logout') }}" method="post">
