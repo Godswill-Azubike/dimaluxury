@@ -44,7 +44,8 @@
 									</div>
 									<div class="row">
 										<div class="col-md-12">
-                                            <input type="hidden" name="public_key" value="FLWPUBK_TEST-cce095f44ba9a165cb2df7ee80ceeffc-X" />
+                                            {{-- <input type="hidden" name="public_key" value="FLWPUBK_TEST-cce095f44ba9a165cb2df7ee80ceeffc-X" /> --}}
+                                            <input type="hidden" name="public_key" value="FLWPUBK-70a340ebcc8fc3edf176c6e839cbdb4a-X" />
                                             <input type="hidden" name="customer[email]" value="{{ $orderData->customer_email }}" />
                                             <input type="hidden" name="customer[phone_number]" value="{{ $orderData->customer_phone }}" />
                                             <input type="hidden" name="customer[name]" value="{{ $orderData->customer_first_name }} {{ $orderData->customer_last_name }}" />
