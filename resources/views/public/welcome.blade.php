@@ -41,7 +41,7 @@
 										<h3 class="service-title"><b>{{ $product->product_name }}</b></h3>
                                         {{-- <span class="badge bg-success text-white">{{ $product->Location }}</span> --}}
 										<p><b>Unit Price ::</b> ₦ {{ $product->unite_price }} <br> <b>Current in Stock::</b> {{ $product->current_stock }}</p>
-                                        <a href="#" class="btn-1 medium" data-toggle="modal" data-target="#staticBackdrop">Make Purchase</a>
+                                        <a href="#" class="btn-1 medium" data-toggle="modal" data-target="#staticBackdrop{{ $product->id }}">Make Purchase</a>
                                         {{-- <button type="button" class="btn btn-primary" >
                                         Launch static backdrop modal
                                         </button> --}}
@@ -49,21 +49,80 @@
 								</a>
 							</div>
                            <!-- Modal -->
-                            <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                            <div class="modal fade" id="staticBackdrop{{ $product->id }}" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                             <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
                                 <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="staticBackdropLabel">{{ $product->product_name }}</h5>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                    </button>
-                                </div>
                                 <div class="modal-body">
-                                    {{ $product->product_details }}
+
+                                    <form method="POST" id="orderForm" name="orderForm" action="{{ route('checkOut', $product->id) }}">
+                                        @csrf
+                                        <div class="row">
+                                            <div class="col-lg-12" id="mainContent">
+                                                <!-- Calculator Area -->
+                                                <div id="optionGroup1" class="row option-box">
+                                                    <div class="option-box-header">
+                                                        <h3>{{ $product->product_name }}</h3>
+
+                                                        <div class="price-box"><sup>₦</sup>{{ $product->unite_price }}</div>
+                                                        <br><br>
+                                                        {{ $product->product_details }}
+                                                        {{-- <br> --}}
+                                                    </div>
+                                                    <div class="col-3 mt-2"><p>Quantity</p></div>
+                                                    <div class="col-3 mb-2">
+                                                        <input id="option1SingleQty" type="text" class="qty-input form-control" name="quantity" value="1" required/>
+                                                    </div>
+
+                                                </div>
+                                                <!-- Personal Details -->
+                                                <div id="personalDetails" class="row contact-box">
+                                                    <div class="contact-box-header">
+                                                        <h3>Contact Details</h3>
+                                                        <p>Please give VALID email to check Out.</p>
+                                                    </div>
+                                                    <div class="col-md-6 col-sm-6">
+                                                        <div class="form-group">
+                                                            <label for="userName">First Name</label>
+                                                            <input id="firstName" class="form-control" name="firstName" type="text" data-parsley-pattern="^[a-zA-Z\s.]+$" required />
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6 col-sm-6">
+                                                        <div class="form-group">
+                                                            <label for="email">Last Name</label>
+                                                            <input id="lastName" class="form-control" name="lastName" type="text" required required/>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6 col-sm-6">
+                                                        <div class="form-group">
+                                                            <label for="phone">Phone Number e.g.: +234</label>
+                                                            <input id="phone" class="form-control" name="phone" type="number" data-parsley-pattern="^\+{1}[0-9]+$" required/>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6 col-sm-6">
+                                                        <div class="form-group">
+                                                            <label for="address">Email</label>
+                                                            <input id="email" class="form-control" name="email" type="email" data-parsley-pattern="^[,.a-zA-Z0-9\s.]+$" required/>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <label for="inputMessage">Address</label>
+                                                            <textarea class="form-control" id="inputMessage" name="address" data-parsley-pattern="^[a-zA-Z0-9\s.:,!?']+$" required></textarea>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12 mb-3">
+                                                        <button type="submit" class="btn-1 medium">Proceed to check out</button>
+                                                    </div>
+                                                </div>
+                                                <!-- Personal Details End -->
+                                            </div>
+                                        </div>
+                                    </form>
+                                    <!-- Form End -->
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                    <a href="{{ route('checkIn', $product->id) }}" class="btn-1 medium">Proceed</a>
+                                    {{-- <a href="{{ route('checkOut', $product->id) }}" class="btn-1 medium">Proceed</a> --}}
                                 </div>
                                 </div>
                             </div>

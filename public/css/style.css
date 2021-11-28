@@ -286,7 +286,7 @@ header {
 
 header.main-header {
     width: 100%;
-    z-index: 2;
+    z-index: 1;
     position: relative;
     -moz-transition: all 0.2s ease-in-out;
     -o-transition: all 0.2s ease-in-out;
@@ -962,7 +962,8 @@ ul#faqNav li a.active {
     position: relative;
     background: #fff;
     margin: 0 0 30px 0;
-    padding: 30px 15px;
+    padding-top: 14px;
+    /* padding: 30px 15px; */
     border: 1px solid #ddd;
 }
 
@@ -988,7 +989,7 @@ ul#faqNav li a.active {
 .contact-box-header p {
     font-size: 13px;
     font-weight: 400;
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
     color: #999;
 }
 
@@ -1293,15 +1294,15 @@ input.form-control.qty-input.standalone-slider-flat-input {
 /* Price Box */
 
 .price-box {
-    position: absolute;
+    /* position: absolute;
     top: 50px;
-    right: 30px;
+    right: 30px; */
     padding: 7px 8px 3px;
     background-color: #fff;
     color: #ff7b79;
     border: 1px solid #ff7b79;
-    z-index: 1;
-    font-size: 18px;
+    /* z-index: 1; */
+    font-size: 14px;
     font-weight: 300;
     line-height: 1;
     display: inline-block;

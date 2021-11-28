@@ -4,11 +4,20 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\GenericController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\OrderController;
+use App\Mail\ConfirmedOrder;
 
 
 Route::get('/', [GenericController::class, 'indexPage'])->name('welcome');
 
-Route::get('/{id}/check-in', [GenericController::class, 'checkIn'])->name('checkIn');
+// Route::get('/email', function () {
+//     return new ConfirmedOrder();
+// });
+
+Route::get('/check-out/with-ref/{orderRefreces}', [GenericController::class, 'checkOutPage'])->name('checkOutPage');
+Route::post('/{productId}/check-out', [GenericController::class, 'checkOut'])->name('checkOut');
+
+Route::get('/check-out/with-ref/{orderRefreces}/callback', [GenericController::class, 'callBack'])->name('callBack');
+Route::get('/order/{orderRefreces}/payment-success', [GenericController::class, 'paymentSuccess'])->name('paymentSuccess');
 
 Route::get('/dashboard', function () {
     return view('admin.dashboard');

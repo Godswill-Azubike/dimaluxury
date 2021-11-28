@@ -49,7 +49,7 @@
 	<!-- Page -->
 	<div id="page">
 		<!-- Header -->
-		<header class="main-header sticky">
+		<header class="main-header">
 			<a href="#menu" class="btn-mobile">
 				<div class="hamburger hamburger--spin" id="hamburger">
 					<div class="hamburger-box">
@@ -62,7 +62,7 @@
 				<div class="row">
 					<div class="col-lg-3 col-6">
 						<div id="logo">
-							<h1><a href="#" title="Dimaluxury"><span><b><strong>Dima</strong></b></span>LuxuryH</a></h1>
+							<h1><a href="{{ route('welcome') }}" title="Dimaluxury"><span><b><strong>Dima</strong></b></span>LuxuryH</a></h1>
 						</div>
 					</div>
 					<div class="col-lg-9 col-6">
