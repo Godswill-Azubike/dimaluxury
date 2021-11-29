@@ -40,7 +40,7 @@
                     <tr>
                         <td>{{ $product->product_name }}</td>
 
-                        <td><div class="badge badge-success">₦ {{ $product->unite_price }}</div></td>
+                        <td><div class="badge badge-success">₦ {{ Helper::your_money_format($product->unite_price) }}</div></td>
                         <td><div class="badge badge-info">{{ $product->total_unit_sold }}</div></td>
                         <td>{{ $product->current_stock }}</td>
                         @if ($product->sales_status == true)

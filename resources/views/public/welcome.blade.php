@@ -40,7 +40,7 @@
 										<div class="icon d-flex align-items-end"><img src="{{ asset("img/female-hair-shape.png") }}" alt="" height="45"></div>
 										<h3 class="service-title"><b>{{ $product->product_name }}</b></h3>
                                         {{-- <span class="badge bg-success text-white">{{ $product->Location }}</span> --}}
-										<p><b>Unit Price ::</b> ₦ {{ $product->unite_price }} <br> <b>Current in Stock::</b> {{ $product->current_stock }}</p>
+										<p><b>Unit Price ::</b> ₦ {{ Helper::your_money_format($product->unite_price) }} <br> <b>Current in Stock::</b> {{ $product->current_stock }}</p>
                                         <a href="#" class="btn-1 medium" data-toggle="modal" data-target="#staticBackdrop{{ $product->id }}">Make Purchase</a>
                                         {{-- <button type="button" class="btn btn-primary" >
                                         Launch static backdrop modal
@@ -63,7 +63,7 @@
                                                     <div class="option-box-header">
                                                         <h3>{{ $product->product_name }}</h3>
 
-                                                        <div class="price-box"><sup>₦</sup>{{ $product->unite_price }}</div>
+                                                        <div class="price-box"><sup>₦</sup>{{ Helper::your_money_format($product->unite_price) }}</div>
                                                         <br><br>
                                                         {{ $product->product_details }}
                                                         {{-- <br> --}}

@@ -37,7 +37,7 @@
                         <td>{{ $order->created_at->diffForHumans() }}</td>
 
                         <td>{{ $order->product->product_name }}</td>
-                        <td><div class="badge badge-success">₦ {{ $order->product->unite_price * $order->product_quantity }}</div></td>
+                        <td><div class="badge badge-success">₦ {{ Helper::your_money_format($order->product->unite_price * $order->product_quantity) }}</div></td>
                         <td>{{ $order->product_quantity}}</td>
 
                         @if ($order->is_paid == false)
@@ -56,8 +56,9 @@
                                 <div class="dropdown d-inline">
                                     <button class="btn btn-outline-primary dropdown-toggle" type="button" id="dropdownMenuButton2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">More</button>
                                     <div class="dropdown-menu">
-                                        {{-- <a class="dropdown-item has-icon btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop" href="#"><i class="fa fa-eye"></i> View Order Details</a> --}}
+                                        @if ($order->is_paid == false)
                                         <a class="dropdown-item has-icon" href="#"><i class="fa fa-check"></i> Mark as Paid</a>
+                                        @endif
                                         <a class="dropdown-item has-icon" href="#"><i class="fa fa-check"></i> Mark as completed</a>
                                     </div>
                                 </div>

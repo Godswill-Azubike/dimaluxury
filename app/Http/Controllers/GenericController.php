@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Order;
 use App\Models\Product;
+use App\Helper\Helper;
 use App\Models\Transactions;
 use App\Mail\ConfirmedOrder;
 use Illuminate\Support\Facades\Mail;

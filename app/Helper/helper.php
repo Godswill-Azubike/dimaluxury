@@ -2,12 +2,6 @@
 
 namespace App\Helper;
 
-use PhpParser\Node\Expr\FuncCall;
-use App\Models\Histroy;
-use App\Models\Admin;
-use App\Models\Investment;
-use App\Models\User;
-use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Http;
 
 class Helper
@@ -39,18 +33,5 @@ class Helper
             $randomString .= $characters[rand(0, $charactersLength - 1)];
         }
         return $randomString;
-    }
-
-    public static function btc_value($amount_usd)
-    {
-        try {
-            $api = 'https://blockchain.info/tobtc?currency=USD&value=';
-            return Http::get($api . $amount_usd);
-        } catch (\Throwable $th) {
-            // throw $th;
-            return '...';
-        }
-
-        // return $api . $amount_usd;
     }
 }

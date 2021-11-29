@@ -29,14 +29,12 @@
 												<li id="extraOption2Sum"></li>
 											</ul>
 											<div class="row total-container">
-												<div class="col-6 p-0">
+												<div class="col-7 p-0">
 													{{-- <input type="text" id="totalTitle" class="summaryInput" name="totallabel" value="Total" disabled /> --}}
                                                     <Strong>Total</Strong>
 												</div>
-												<div class="col-6 p-0">
-													{{-- <input type="text" id="total" class="summaryInput" name="total" value="{{ $orderData->product->unite_price * $orderData->product_quantity }}" data-parsley-errors-container="#totalError" data-parsley-empty-order="" --}}
-														{{-- disabled /> --}}
-                                                        <Strong>{{ $orderData->product->unite_price * $orderData->product_quantity }}</Strong>
+												<div class="col-5 p-0">
+                                                    <Strong>₦ {{ Helper::your_money_format($orderData->product->unite_price * $orderData->product_quantity) }}</Strong>
 												</div>
 											</div>
 											<div id="totalError"></div>
