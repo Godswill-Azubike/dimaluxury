@@ -25,7 +25,7 @@
                                     <ul id="orderSumList">
                                         <li id="option1SingleSum"><strong><b>Product</b></strong> ________ {{ $orderData->product->product_name }}</li>
                                         <li id="option2SingleSum"><strong><b>Quantity</b></strong> ________ {{ $orderData->product_quantity }}</li>
-                                        <li id="option3SingleSum"><strong><b>Unit Price</b></strong> ________ {{ $orderData->product->unite_price }}</li>
+                                        <li id="option3SingleSum"><strong><b>Unit Price</b></strong> ________ ₦ {{ Helper::your_money_format($orderData->product->unite_price) }}</li>
                                         {{-- <li id="extraOption1Sum"><strong><b></b></strong> ________ {{ $orderData->product->product_name }}</li> --}}
                                         <li id="extraOption2Sum"></li>
                                     </ul>

@@ -172,7 +172,10 @@
 										color: #000000;
 										font-family: 'Poppins', Helvetica, sans-serif;">
 										Dear <b style="color: #333333;">{{ $order->customer_first_name }} {{ $order->customer_last_name }}</b>,
-										We've gotten your order of {{ $order->product_quantity }} {{ $order->product->product_name }}. <br /> We will reach out to you soon.
+										We've gotten your order of <b>{{ $order->product->product_name }}</b>. <br />
+                                        <b>Quantity</b>: _____ {{ $order->product_quantity }} <br />
+                                        <b>Total Cost</b>: _____ ₦{{ Helper::your_money_format($order->product->unite_price * $order->product_quantity) }} <br />
+                                        We will reach out to you soon.
 									</td>
 
 								</tr><!-- END OF LIST ITEM 1 -->
