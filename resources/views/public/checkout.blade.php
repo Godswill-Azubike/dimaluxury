@@ -20,17 +20,15 @@
 											<input type="hidden" id="subSum2" name="subSum2" value="0" />
 											<input type="hidden" id="subSum3" name="subSum3" value="0" />
 											<input type="hidden" id="totalDue" name="totalDue" value="0" />
-											<h3>Your Order Summary</h3>
+											<h3>Dear {{ $orderData->customer_first_name }}, here is your Order Summary</h3>
 											<ul id="orderSumList">
 												<li id="option1SingleSum"><strong><b>Product</b></strong> ________ {{ $orderData->product->product_name }}</li>
-												<li id="option2SingleSum"></li>
-												<li id="option3SingleSum"></li>
-												<li id="extraOption1Sum"></li>
+                                                <li id="option2SingleSum"><strong><b>Quantity</b></strong> ________ {{ $orderData->product_quantity }}</li>
+                                                <li id="option3SingleSum"><strong><b>Unit Price</b></strong> ________ ₦ {{ Helper::your_money_format($orderData->product->unite_price) }}</li>
 												<li id="extraOption2Sum"></li>
 											</ul>
 											<div class="row total-container">
 												<div class="col-7 p-0">
-													{{-- <input type="text" id="totalTitle" class="summaryInput" name="totallabel" value="Total" disabled /> --}}
                                                     <Strong>Total</Strong>
 												</div>
 												<div class="col-5 p-0">
@@ -68,7 +66,7 @@
 									<div class="row">
 										<div class="col-lg-12">
 											<button type="submit" name="submit" class="btn-form-func">
-												<span class="btn-form-func-content">SUBMIT</span>
+												<span class="btn-form-func-content">Pay Now</span>
 												<span class="icon"><i class="fa fa-check" aria-hidden="true"></i></span>
 											</button>
 										</div>
